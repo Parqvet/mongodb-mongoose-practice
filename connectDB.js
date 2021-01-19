@@ -9,7 +9,8 @@ const db = mongoose.connection;
 // como segundo parametro se agrega un objeto con algunas configuraciones para que no nos tire mensajes de advertencia
 mongoose.connect(uri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 })
     .catch(err => console.log(err));
 
